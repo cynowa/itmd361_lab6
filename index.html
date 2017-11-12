@@ -36,7 +36,15 @@
 		<h2 id="textoutput" class="center">Show results here</h2>
 	</div>
 	<script type="text/javascript">
-		
+    function alertFunction() {
+      var textInput = document.getElementById('entryinput');
+      var textOutput = document.getElementById('textoutput');
+      alert('Rob Cynowa: ' + textInput.value);
+      textOutput.innerHTML = textInput.value;
+      textInput.value = "";
+    }
+    var alertButton = document.getElementById('entrybutton');
+    alertButton.addEventListener('click', alertFunction);
 	</script>
 </body>
 </html>
